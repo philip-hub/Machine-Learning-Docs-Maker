@@ -11,5 +11,8 @@ This package can be used with TensorFlow and MatPlot Lib to save documention on 
 
 # Usage
 
-1. Anywhere in your notebook before running any of the other packages put in the line <br>
+1. Anywhere in your notebook before running any of the other functions in this package put in the line <br>
     `osWritePath, fileHead = dm.docSetup("")`
+This will create the path and title for the document. You can pass a string into the function for a custom name otherwise it will be test #n with n being the number of times it was ran. The defualt should be prefered if you need to run a lot of tests and save a lot of results.
+
+2. 
