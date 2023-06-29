@@ -15,7 +15,27 @@ This package can be used with TensorFlow and MatPlot Lib to save documention on 
     `osWritePath, fileHead = dm.docSetup("")`
 This will create the path and title for the document. You can pass a string into the function for a custom name otherwise it will be test #n with n being the number of times it was ran. The defualt should be prefered if you need to run a lot of tests and save a lot of results.
 
-2. After you have made a variable that is set to TensorFlow's model.fit, use the `dm.handleLogs` function. In the example below we set history to model.fit and proceed to collect log information. We then create a dataLog varible to have everything in a nice string. This will be simplified in upcoming versions.
+2. It is reccomended that you do not hard code hyperparemeters in your tensor flow file instead put th near the top of your file and use them as varibles. For ML Doc Maker you will need to create 2 lists one list with the hyperparameters names and spec names about the model and another list with the hyperparameters values and model spec values. Order needs to corespond in both lists. This will be simiplified to a dictionary in a later release. Here is an example:
+```
+seed = 42 #general specs about the model
+testSize = .2
+act_function = "sigmoid"
+optimizier = "Adam" # only to document this has to be changed in the cell 13 
+
+#hyperparameters
+lstm_units = 50
+lr = 5e-4
+batchsize = 16
+epochs = 50
+
+#required for ML Doc Maker
+hyper_params = ["Random Seed","Test Split","Activation","Optimizer","LSTM Units","Learning Rate", "Batchsize", "Epochs"]
+hyper_params_values = [seed, testSize, act_function, optimizier, lstm_units,lr,batchsize,epochs]
+
+```
+
+
+3. After you have made a variable that is set to TensorFlow's model.fit, use the `dm.handleLogs` function. In the example below we set history to model.fit and proceed to collect log information. We then create a dataLog varible to have everything in a nice string. This will be simplified in upcoming versions.
 ```
 history = model.fit(X_train, y_train, #this is tensorflow code that should be in your file.
                     epochs=epochs, 
