@@ -1,5 +1,9 @@
 # Machine-Learning-Docs-Maker
 
+Build In | Contributors | Live version | Current Realease
+--- | --- | --- | ---
+**Python 🐍** | [@philip-hub](https://github.com/philip-hub) | Here | Beta
+
 This package can be used with TensorFlow and MatPlot Lib to save documention on TensorFlow Machine Learning Models Performance.
 
 # Setup
