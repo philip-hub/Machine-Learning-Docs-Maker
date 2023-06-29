@@ -62,3 +62,37 @@ val_acc = dm.handleLogs(history.history['val_Accuracy'])
 
 dataLog = "\n\nTrain Loss:\n"+train_loss+"\n\nVal Loss:\n"+val_loss+"\n\nAccuracy\n"+acc+"\n\nValue Accuracy:\n"+val_acc
 ```
+4. Next for your plots use the Matplot lib to create and save them. Save them using the osPath varible made above plus the desired file name. Then append the file names to a list. T Examples below.
+```
+# creating the plot matplot lib
+plt.plot(history.history['loss'], 'o--', label="Train")
+plt.plot(history.history['val_loss'], 'o--', label="Val")
+plt.ylim(0.0,10)
+plt.legend()
+
+#showing the plot
+acc_plot = plt.gcf()
+plt.show()
+plt.draw()
+
+#saving the plot and adding it to a list called plotFiles
+fileName = "lossplot.jpg"
+plotPath = osWritePath+fileName
+acc_plot.savefig(plotPath)
+plotFiles = [fileName]
+
+#repeating the process
+plt.plot(history.history['Accuracy'], 'o--', label="Accuracy")
+plt.plot(history.history['val_Accuracy'], 'o--', label="Val_Accuracy")
+plt.ylim(0.0,1)
+plt.legend()
+
+acc_plot = plt.gcf()
+plt.show()
+plt.draw
+
+fileName2 = "accplot.jpg"
+plothPath = osWritePath+fileName2
+acc_plot.savefig(plotPath)
+plotFiles.append(fileName2)
+```
