@@ -4,6 +4,7 @@ Build In | Contributors | Live version | Current Realease
 --- | --- | --- | ---
 **Python 🐍** | [@philip-hub](https://github.com/philip-hub) | Here | Beta
 
+![just for fun](https://media4.giphy.com/media/MKorKFj0Muz4P0CI7D/giphy.gif?cid=ecf05e47o5eob94tjfen8iu5w95jekxx1co44buhwcbtw8tw&ep=v1_gifs_search&rid=giphy.gif&ct=g)
 This package can be used with TensorFlow and MatPlot Lib to save documention on TensorFlow Machine Learning Models Performance.
 
 # Setup
