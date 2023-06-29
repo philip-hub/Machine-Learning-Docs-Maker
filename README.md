@@ -101,4 +101,4 @@ plotFiles.append(fileName2)
 ```
 dm.docModel(fileHead, hyper_params, hyper_params_values, plotFiles, dataLog, osWritePath)
 ```
-    It will then create new Markdown (.md) file inside the folder that is set to Test #n. The markdown will look similar to this example.
+   It will then create new Markdown (.md) file inside the folder that is set to Test #n. The markdown will look similar to this example.
