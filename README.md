@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
     ```
    osWritePath, fileHead = dm.docSetup("")
     ```
-This will create the path and title for the document. You can pass a string into the function for a custom name otherwise it will be test #n with n being the number of times it was ran. The defualt should be prefered if you need to run a lot of tests and save a lot of results.
+    This will create the path and title for the document. You can pass a string into the function for a custom name otherwise it will be test #n with n being the number of times it was       ran. The defualt should be prefered if you need to run a lot of tests and save a lot of results.
 
 2. It is reccomended that you do not hard code hyperparemeters in your tensor flow file instead put th near the top of your file and use them as varibles. For ML Doc Maker you will need to create 2 lists one list with the hyperparameters names and spec names about the model and another list with the hyperparameters values and model spec values. Order needs to corespond in both lists. This will be simiplified to a dictionary in a later release. Here is an example:
 ```
