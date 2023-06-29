@@ -96,3 +96,9 @@ plothPath = osWritePath+fileName2
 acc_plot.savefig(plotPath)
 plotFiles.append(fileName2)
 ```
+5. Run this function using all the parameters we made above.
+
+```
+dm.docModel(fileHead, hyper_params, hyper_params_values, plotFiles, dataLog, osWritePath)
+```
+It will then create new Markdown (.md) file inside the folder that is set to Test #n. The markdown will look similar to this example.
