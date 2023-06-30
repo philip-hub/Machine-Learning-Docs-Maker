@@ -23,9 +23,9 @@ def docSetup(customName):
     if customName=="":
         with open(setupFile, 'r+') as file:
             number = file.read().rstrip()
-            file.truncate(0)
             n = int(number)
             numberInt = n+1
+            file.truncate(0)
             file.write(str(numberInt))
             print(number)
             filePathName = "Test "+str(number)
